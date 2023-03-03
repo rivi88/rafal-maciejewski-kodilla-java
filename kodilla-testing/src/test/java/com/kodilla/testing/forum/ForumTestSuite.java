@@ -1,9 +1,9 @@
-package com.kodilla.testing.forum;                             // [1]
+package com.kodilla.testing.forum;
 
 import com.kodilla.testing.user.SimpleUser;
 import org.junit.jupiter.api.*;
 
-class ForumTestSuite {                                         // [5]
+class ForumTestSuite {
     @BeforeEach
     public void before() {
         System.out.println("Test Case: begin");
@@ -39,9 +39,8 @@ class ForumTestSuite {                                         // [5]
         Assertions.assertEquals("John Smith", result);
     }
 
-    @DisplayName("when create SimpleUser with name, " +
-            "then getUsername should return correct name"
-    )
+    @DisplayName("when create SimpleUser with name, " + "then getUsername should return correct name")
+
     @Test
     void testCaseUsername() {
         //Given

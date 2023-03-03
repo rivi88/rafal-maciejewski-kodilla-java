@@ -5,6 +5,10 @@ public class SimpleUser {
     private String realName;
 
 
+    public SimpleUser(String userName) {
+        this.userName = userName;
+    }
+
     public SimpleUser(String userName, String realName) {
         this.userName = userName;
         this.realName = realName;
