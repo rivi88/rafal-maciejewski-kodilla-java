@@ -18,7 +18,6 @@ public class Circle implements Shape {
         return name;
 
     }
-
     @Override
     public int getField() {
         return radius * radius * 3;

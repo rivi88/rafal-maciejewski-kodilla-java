@@ -12,7 +12,6 @@ public class Triangle implements Shape {
         this.height = height;
 
     }
-
     @Override
     public String getShapeName() {
         return name;
