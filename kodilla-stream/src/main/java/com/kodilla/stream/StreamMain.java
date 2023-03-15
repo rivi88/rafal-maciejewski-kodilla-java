@@ -25,5 +25,7 @@ public class StreamMain {
         System.out.println(poemBeautifier.beautify("Cześć", text -> text + " ABC " + text));
         System.out.println(poemBeautifier.beautify("hi i'am bot", text -> text.toUpperCase()));
         System.out.println(poemBeautifier.beautify("Cześć", text -> "<<<" + text + ">>>"));
+        System.out.println(poemBeautifier.beautify("mamy zwiadowce", text -> " <" + text.toUpperCase() + "> " + text));
+        System.out.println(poemBeautifier.beautify("bot", text -> text + " to " + text));
     }
 }
