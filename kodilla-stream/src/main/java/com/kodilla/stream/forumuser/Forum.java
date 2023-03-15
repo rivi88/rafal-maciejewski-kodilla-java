@@ -12,7 +12,7 @@ public final class Forum {
         forumUsers.add(new ForumUser(2, "DorothyN", 'F', 1989, 12, 1, 5));
         forumUsers.add(new ForumUser(3, "JohnW", 'M', 1999, 8, 2, 17));
         forumUsers.add(new ForumUser(4, "LucyR", 'F', 2012, 2, 13, 8));
-        forumUsers.add(new ForumUser(5, "OwenR", 'M', 2000, 6, 14, 1));
+        forumUsers.add(new ForumUser(5, "OwenR", 'M', 2000, 6, 14, 0));
         forumUsers.add(new ForumUser(6, "MatildaD", 'F', 2009, 5, 25, 23));
         forumUsers.add(new ForumUser(7, "CorinneF", 'F', 1996, 11, 29, 15));
         forumUsers.add(new ForumUser(8, "KhloeF", 'F', 2005, 1, 17, 7));
