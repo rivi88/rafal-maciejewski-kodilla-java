@@ -7,7 +7,7 @@ public class StreamMain {
 
     public static void main(String[] args) {
         People.getList().stream()
-                .map(String::toUpperCase)
-                .forEach(s -> System.out.println(s));
+                .filter(s -> s.length() > 11)
+                .forEach(System.out::println);
     }
 }
