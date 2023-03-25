@@ -8,9 +8,6 @@ public class OptionalExample {
 
         Optional<User> optionalUser = Optional.ofNullable(user);
 
-        String username =
-                optionalUser.orElse(new User("")).getName();
-
-        System.out.println(username);
+        optionalUser.ifPresent(u -> System.out.println(u.getName()));
     }
 }
