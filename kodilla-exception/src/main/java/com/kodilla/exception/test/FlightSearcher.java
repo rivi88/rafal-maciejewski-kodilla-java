@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class FlightSearcher {
     private HashMap<String, Boolean> airportMap;
 
-    public void FlightSearch() {
+    public FlightSearcher() {
         airportMap = new HashMap<String, Boolean>();
         airportMap.put("New York", true);
         airportMap.put("London", true);
@@ -25,7 +25,6 @@ public class FlightSearcher {
         }
 
         System.out.println("There are available flights to " + flight.getArrivalAirport());
-        // implementation of actual flight search logic
     }
 }
 
