@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.exercise;
+package com.kodilla.good.patterns.srp;
 
 import java.time.LocalDateTime;
 
