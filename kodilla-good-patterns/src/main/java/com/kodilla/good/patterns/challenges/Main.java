@@ -6,7 +6,10 @@ public class Main {
     public static void main(String[] args) {
         MovieStore movieStore = new MovieStore();
 
-        String result = movieStore.getMovies().values().stream()
+        String result = movieStore
+                .getMovies()
+                .values()
+                .stream()
                 .flatMap(movieTitles -> movieTitles.stream())
                 .collect(Collectors.joining("!"));
 
