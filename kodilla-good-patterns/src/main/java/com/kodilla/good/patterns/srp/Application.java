@@ -7,8 +7,8 @@ public class Application {
         RentRequest rentRequest = rentRequestRetriever.retrieve();
 
         RentalProcessor rentalProcessor = new RentalProcessor(
-                new MailService(), new CarRentalService(), new CarRentalRepository());
-        rentalProcessor.process(user, rentFrom, rentTo);
+                (InformationService) new MailService(), (RentalService) new CarRentalService(), (RentalRepository) new CarRentalRepository());
+        rentalProcessor.process(rentRequest);
     }
 
 }

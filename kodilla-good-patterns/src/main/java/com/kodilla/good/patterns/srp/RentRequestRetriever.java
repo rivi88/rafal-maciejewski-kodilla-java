@@ -1,5 +1,7 @@
 package com.kodilla.good.patterns.srp;
 
+import java.time.LocalDateTime;
+
 public class RentRequestRetriever {
 
     public RentRequest retrieve() {
