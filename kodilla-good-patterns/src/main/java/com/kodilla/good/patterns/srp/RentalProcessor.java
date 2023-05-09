@@ -25,5 +25,4 @@ public class RentalProcessor {
             return new RentalDto(rentRequest.getUser(), false);
         }
     }
-
 }
