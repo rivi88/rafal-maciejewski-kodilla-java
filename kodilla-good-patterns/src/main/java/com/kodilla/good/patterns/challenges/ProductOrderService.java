@@ -16,10 +16,10 @@ public class ProductOrderService {
 
         if (isOrdered) {
             informationService.inform(orderRequest.getUser());
-            orderRepository.createOrder(orderRequest.getProduct(), orderRequest.getUser());
-            return new OrderDto(orderRequest.getUser(), true);
+            orderRepository.createOrder((Product) orderRequest.getProduct(), (User) orderRequest.getUser());
+            return new OrderDto((User) orderRequest.getUser(), true);
         } else {
-            return new OrderDto(orderRequest.getUser(), false);
+            return new OrderDto((User) orderRequest.getUser(), false);
         }
     }
 
