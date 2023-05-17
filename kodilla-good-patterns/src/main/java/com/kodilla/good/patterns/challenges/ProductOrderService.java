@@ -35,7 +35,7 @@ public class ProductOrderService {
 
 
         User user = new User("JDoe", "John", "Doe");
-        Product product = new Product("Example Product");
+        Product product = new Product("Example Product", 21.3);
         OrderRequest orderRequest = new OrderRequest(user, product);
 
 
