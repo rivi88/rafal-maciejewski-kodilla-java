@@ -8,12 +8,12 @@ public class OrderRequest {
     public OrderRequest(User user, Product product) {
     }
 
-    public Object getProduct() {
+    public Product getProduct() {
         return this.product;
 
     }
 
-    public Object getUser() {
+    public User getUser() {
         return user;
     }
 }

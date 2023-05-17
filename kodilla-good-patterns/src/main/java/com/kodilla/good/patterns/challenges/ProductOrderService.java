@@ -16,31 +16,26 @@ public class ProductOrderService {
 
         if (isOrdered) {
             informationService.inform(orderRequest.getUser());
-            orderRepository.createOrder((Product) orderRequest.getProduct(), (User) orderRequest.getUser());
-            return new OrderDto((User) orderRequest.getUser(), true);
+            orderRepository.createOrder(orderRequest.getProduct(), orderRequest.getUser());
+            return new OrderDto(orderRequest.getUser(), true);
         } else {
-            return new OrderDto((User) orderRequest.getUser(), false);
+            return new OrderDto(orderRequest.getUser(), false);
         }
     }
 
     public static void main(String[] args) {
 
-
         InformationService informationService = new EmailInformationService();
-        OrderService orderService = new AllegroOrderService();
+        OrderService orderService = new ShopOrderService();
         OrderRepository orderRepository = new DatabaseOrderRepository();
 
-
         ProductOrderService productOrderService = new ProductOrderService(informationService, orderService, orderRepository);
-
 
         User user = new User("JDoe", "John", "Doe");
         Product product = new Product("Example Product", 21.3);
         OrderRequest orderRequest = new OrderRequest(user, product);
 
-
         OrderDto orderDto = productOrderService.process(orderRequest);
-
 
         if (orderDto.isOrdered()) {
             System.out.println("Zamówienie zostało złożone.");
