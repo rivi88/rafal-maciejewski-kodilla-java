@@ -9,11 +9,4 @@ public class Product {
         this.productPrice = productPrice;
     }
 
-    public String getProductName() {
-        return productName;
-    }
-
-    public double getProductPrice() {
-        return productPrice;
-    }
 }

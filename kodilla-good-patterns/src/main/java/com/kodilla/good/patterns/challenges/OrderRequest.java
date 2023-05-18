@@ -6,6 +6,8 @@ public class OrderRequest {
 
 
     public OrderRequest(User user, Product product) {
+        this.product = product;
+        this.user = user;
     }
 
     public Product getProduct() {
