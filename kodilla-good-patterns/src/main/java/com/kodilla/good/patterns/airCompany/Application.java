@@ -2,7 +2,7 @@ package com.kodilla.good.patterns.airCompany;
 
 import java.util.List;
 
-public class FlightSearchEngine {
+public class Application {
 
     public static void main(String[] args) {
         FlightManager flightManager = new FlightManager();
