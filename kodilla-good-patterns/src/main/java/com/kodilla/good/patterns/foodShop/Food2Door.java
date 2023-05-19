@@ -4,16 +4,14 @@ public class Food2Door {
 
     public static void main(String[] args) {
         OrderProcessor orderProcessor = new OrderProcessor();
+        orderProcessor.addSupplierStrategy("ExtraFoodShop", new ExtraFoodShopStrategy());
+        orderProcessor.addSupplierStrategy("HealthyShop", new HealthyShopStrategy());
+        orderProcessor.addSupplierStrategy("GlutenFreeShop", new GlutenFreeShopStrategy());
 
-        orderProcessor.setStrategy(new ExtraFoodShopStrategy());
         orderProcessor.processOrder("ExtraFoodShop", 10, "Mleko");
 
-        orderProcessor.setStrategy(new HealthyShopStrategy());
         orderProcessor.processOrder("HealthyShop", 5, "Warzywa");
 
-        orderProcessor.setStrategy(new GlutenFreeShopStrategy());
         orderProcessor.processOrder("GlutenFreeShop", 3, "Chleb");
     }
 }
-
-
