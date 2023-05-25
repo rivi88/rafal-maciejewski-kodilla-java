@@ -7,4 +7,6 @@ include 'good.patterns'
 include 'kodilla-good-patterns'
 include 'spring-intro'
 include 'kodilla-spring-intro'
+include 'kodilla-spring'
+
 
