@@ -30,13 +30,14 @@ public class Calculator {
         return result;
     }
 
-    public Object div(double a, double b) {
+    public double div(double a, double b) {
         if (b != 0) {
             double result = a / b;
             display.displayValue(result);
+            return result;
         } else {
             System.out.println("Nie można dzielić przez zero!");
+            return 0.0;
         }
-        return null;
     }
 }
