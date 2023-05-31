@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 public class CalculatorTestSuite {
-
+    //todo @Autowired
     @Test
     public void testCalculations() {
         Calculator calculator = new Calculator(new Display());
