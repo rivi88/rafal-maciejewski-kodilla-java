@@ -26,6 +26,7 @@ class LibraryTestSuite {
         }
 
         Library deepCopyLibrary = null;
+        //todo żeby zrobić to jako metodę w głównym
         try {
             deepCopyLibrary = library.clone();
             deepCopyLibrary.setName("Library 3");
