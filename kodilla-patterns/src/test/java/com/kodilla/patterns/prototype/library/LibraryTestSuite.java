@@ -10,30 +10,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class LibraryTestSuite {
 
     @Test
-    void testGetBooks() {
+    void testGetBooks() throws CloneNotSupportedException {
         // Given
         Library library = new Library("Library 1");
         IntStream.rangeClosed(1, 5)
                 .forEach(n -> library.getBooks().add(new Book("Title " + n, "Author " + n, LocalDate.now())));
 
         // When
-        Library shallowCopyLibrary = null;
-        try {
-            shallowCopyLibrary = library.clone();
-            shallowCopyLibrary.setName("Library 2");
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+        Library shallowCopyLibrary = library.clone();
+        shallowCopyLibrary.setName("Library 2");
 
-        Library deepCopyLibrary = null;
-        //todo żeby zrobić to jako metodę w głównym
-        try {
-            deepCopyLibrary = library.clone();
-            deepCopyLibrary.setName("Library 3");
-            deepCopyLibrary.getBooks().add(new Book("New Book", "New Author", LocalDate.now()));
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+        Library deepCopyLibrary = library.deepCopy();
+        deepCopyLibrary.setName("Library 3");
+        deepCopyLibrary.getBooks().add(new Book("New Book", "New Author", LocalDate.now()));
 
         // Then
         System.out.println(library.getName() + " contains " + library.getBooks().size() + " books.");

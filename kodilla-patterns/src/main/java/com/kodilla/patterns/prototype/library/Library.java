@@ -34,4 +34,13 @@ public final class Library implements Cloneable {
         clonedLibrary.books = new HashSet<>(books);
         return clonedLibrary;
     }
+
+    public Library deepCopy() throws CloneNotSupportedException {
+        Library clonedLibrary = (Library) super.clone();
+        clonedLibrary.books = new HashSet<>();
+        for (Book book : books) {
+            clonedLibrary.books.add(new Book(book.getTitle(), book.getAuthor(), book.getPublicationDate()));
+        }
+        return clonedLibrary;
+    }
 }
